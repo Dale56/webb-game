@@ -653,7 +653,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Throwing Knife
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 961168734743059063, guid: a66afbe55a9b6324594e9b9dd488b348, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a66afbe55a9b6324594e9b9dd488b348, type: 3}
 --- !u!4 &670350326 stripped
 Transform:
@@ -1149,7 +1150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e49f48fe326d7b74c8cd0179ca1c2556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knife: {fileID: 738810650668659054, guid: 1a881e827ebef7641948f702ef77f28f, type: 3}
+  knife: {fileID: 5571013927412137371, guid: a66afbe55a9b6324594e9b9dd488b348, type: 3}
   player: {fileID: 1533941277}
 --- !u!1 &1900397132
 GameObject:
