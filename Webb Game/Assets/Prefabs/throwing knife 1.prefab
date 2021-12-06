@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 347054464381321830}
   - component: {fileID: 961168734743059063}
-  - component: {fileID: 7691589013525577146}
+  - component: {fileID: 6489568170711807298}
   m_Layer: 0
   m_Name: throwing knife 1
   m_TagString: Untagged
@@ -56,7 +56,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5571013927412137371}
-  m_LocalRotation: {x: -0.000000007450579, y: 0.00000008944355, z: 0.7071071, w: -0.7071065}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.7672, y: 4.2729, z: 3.9081}
   m_LocalScale: {x: 0.14238279, y: 0.14238279, z: 0.14238279}
   m_ConstrainProportionsScale: 0
@@ -65,7 +65,7 @@ Transform:
   - {fileID: 8341672588859073197}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 180, y: -180, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &961168734743059063
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78,12 +78,12 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &7691589013525577146
-MeshCollider:
+--- !u!65 &6489568170711807298
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,10 +92,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: -1
-  m_Mesh: {fileID: 2320335753334315577, guid: 709b8c962d489d14abefce98114cddc7, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.18, y: 3.08, z: 0.48}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7109110734805519443
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,14 +120,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7109110734805519443}
-  m_LocalRotation: {x: 0.7071069, y: -0.70710665, z: 0.00000005338507, w: -0.000000053385083}
-  m_LocalPosition: {x: -4.440892e-16, y: -2.3283064e-10, z: 0}
+  m_LocalRotation: {x: 1, y: -0.00000036351653, z: -0.00000031292433, w: -0.00000002638019}
+  m_LocalPosition: {x: -0.006358877, y: 0.010827254, z: 0.0000033489805}
   m_LocalScale: {x: 0.6251233, y: 0.6251233, z: 0.6251233}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 347054464381321830}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: -180}
 --- !u!33 &2636185309565829383
 MeshFilter:
   m_ObjectHideFlags: 0
