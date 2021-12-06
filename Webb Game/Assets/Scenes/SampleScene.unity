@@ -1153,7 +1153,8 @@ MonoBehaviour:
   knife: {fileID: 5571013927412137371, guid: a66afbe55a9b6324594e9b9dd488b348, type: 3}
   player: {fileID: 1533941277}
   force: 364.04
-  torque: 250
+  torque: 10000
+  maxSpin: 20
 --- !u!1 &1900397132
 GameObject:
   m_ObjectHideFlags: 0
