@@ -16,7 +16,7 @@ public class axeAttack : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Mouse0) && cooldown <= 0) {
             animator.SetTrigger("Attack");
-            cooldown += 3.88;
+            cooldown += 2;
         } 
         if(cooldown < 0) {
             cooldown = 0;
@@ -24,14 +24,14 @@ public class axeAttack : MonoBehaviour
             cooldown -= Time.deltaTime;
         }
 
-         if(Input.GetKeyDown(KeyCode.Mouse1) && cooldown <= 0) {
-            animator.SetTrigger("Attack Heavy");
-            cooldown += 4.2;
-        } 
-        if(cooldown < 0) {
-            cooldown = 0;
-        } else {
-            cooldown -= Time.deltaTime;
-        }
+        //  if(Input.GetKeyDown(KeyCode.Mouse1) && cooldown <= 0) {
+        //     animator.SetTrigger("Attack Heavy");
+        //     cooldown += 4.2;
+        // } 
+        // if(cooldown < 0) {
+        //     cooldown = 0;
+        // } else {
+        //     cooldown -= Time.deltaTime;
+        // }
     }
 }
