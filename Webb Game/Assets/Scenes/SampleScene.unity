@@ -520,6 +520,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479860293}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &622570446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 622570447}
+  m_Layer: 0
+  m_Name: Knife Trash Can
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &622570447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622570446}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.41643858, y: 4.0914187, z: 5.4194407}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &629684910
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,7 +736,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929679533}
   m_LocalRotation: {x: -0, y: -0.0008633885, z: -0, w: -0.99999964}
-  m_LocalPosition: {x: -0.416, y: 0.264, z: 0.424}
+  m_LocalPosition: {x: -0.445, y: 0.264, z: 0.424}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -725,6 +756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knifeParent: {fileID: 929679533}
+  knifeTrash: {fileID: 622570446}
   knife: {fileID: 5571013927412137371, guid: a66afbe55a9b6324594e9b9dd488b348, type: 3}
   player: {fileID: 1533941277}
   force: 364.04
@@ -733,6 +765,7 @@ MonoBehaviour:
   xoffset: 0
   yoffset: 0
   zoffset: 0
+  cooldown: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
