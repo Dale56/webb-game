@@ -765,7 +765,8 @@ MonoBehaviour:
   xoffset: 0
   yoffset: 0
   zoffset: 0
-  cooldown: 0
+  cooldown: 1.3
+  knifeSpawned: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

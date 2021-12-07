@@ -15,30 +15,41 @@ public class throwKnife : MonoBehaviour
     [SerializeField] public float yoffset;
     [SerializeField] public float zoffset;
     [SerializeField] public double cooldown;
+    public bool knifeSpawned;
 
 
     void Start()
     {
-        // SpawnKnife();
     }
 
     // Update is called once per frame
     void Update()
     {
-        ThrowKnife();
         // if(cooldown > 0)
         // {
         //     cooldown -= Time.deltaTime;
-        // } else if(cooldown ) {
-        //     cooldown = -0.01;
+        // } else if(cooldown<=0 && knifeSpawned == false) {
+        //     cooldown = 0;
         //     var newInstance = Instantiate(knife, transform.position, (transform.rotation));
         //     newInstance.transform.SetParent(knifeParent.transform);
+        //     knifeSpawned = true;
+
+        //     if(Input.GetKeyDown(KeyCode.Mouse2))
+        // {   
+        //     Rigidbody knifeRigidbody = newInstance.AddComponent<Rigidbody>();
+        //     knifeRigidbody.maxAngularVelocity = maxSpin;
+        //     knifeRigidbody.AddRelativeForce(Vector3.forward * force);
+        //     knifeRigidbody.AddRelativeTorque(torque, 0, 0);
+        //     newInstance.transform.SetParent(knifeTrash.transform);
+        //     cooldown += 1.5;
+        //     knifeSpawned = false;
         // }
-    }
-    public void ThrowKnife()
-    {
-        if(cooldown<1.5 && Input.GetKeyDown(KeyCode.Mouse2))
-        {
+        // } else if(cooldown < 0){
+        //     cooldown = 0;
+        // }
+        
+        if(Input.GetKeyDown(KeyCode.Mouse2))
+        {   
             var newInstance = Instantiate(knife, transform.position, (transform.rotation));
             newInstance.transform.SetParent(knifeParent.transform);
             Rigidbody knifeRigidbody = newInstance.AddComponent<Rigidbody>();
@@ -46,12 +57,8 @@ public class throwKnife : MonoBehaviour
             knifeRigidbody.AddRelativeForce(Vector3.forward * force);
             knifeRigidbody.AddRelativeTorque(torque, 0, 0);
             newInstance.transform.SetParent(knifeTrash.transform);
-            // cooldown += 1.5;
+            cooldown += 1.5;
+            knifeSpawned = false;
         }
     }
-    // public void SpawnKnife()
-    // {
-    //     var newInstance = Instantiate(knife, transform.position, (transform.rotation));
-    //     newInstance.transform.SetParent(knifeParent.transform);
-    // }
 }
