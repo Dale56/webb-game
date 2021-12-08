@@ -11,9 +11,6 @@ public class throwKnife : MonoBehaviour
     [SerializeField] public float force;
     [SerializeField] public float torque;
     [SerializeField] public int maxSpin;
-    [SerializeField] public float xoffset;
-    [SerializeField] public float yoffset;
-    [SerializeField] public float zoffset;
     [SerializeField] public double cooldown;
     public bool knifeSpawned;
 

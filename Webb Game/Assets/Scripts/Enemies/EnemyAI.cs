@@ -13,6 +13,7 @@ public class EnemyAI : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     [SerializeField] public GameObject weapon;
     private GameObject player;
+    [SerializeField] public int health;
     private void Awake() {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = weapon.GetComponent<Animator>();
@@ -37,6 +38,15 @@ public class EnemyAI : MonoBehaviour
             cooldown -= Time.deltaTime;
         } else if(cooldown < 0) {
             cooldown = 0;
+        }
+    }
+
+    public void TakeDamage(int damage) {
+        Debug.Log("DamageTaken");
+        health -= damage;
+
+        if(health <= 0) {
+            Destroy(this.gameObject);
         }
     }
 }
