@@ -12,6 +12,11 @@ public class EnemyAI : MonoBehaviour
     }
 
     private void Update() {
-        navMeshAgent.destination = movePositionTransform.position;
+        Debug.Log(Vector3.Distance(movePositionTransform.position, transform.position));
+        if(Vector3.Distance(movePositionTransform.position, transform.position) > 3) {
+            navMeshAgent.destination = movePositionTransform.position;
+        } else {
+            navMeshAgent.destination = transform.position;
+        }
     }
 }
