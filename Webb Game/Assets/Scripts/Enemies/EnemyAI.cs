@@ -8,13 +8,16 @@ public class EnemyAI : MonoBehaviour
     public Animator animator;
     [SerializeField] public double cooldownStatic;
     public double cooldown = 0;
-    [SerializeField] private Transform movePositionTransform;
+    public Transform movePositionTransform;
     [SerializeField] private double attackRange;
     private NavMeshAgent navMeshAgent;
     [SerializeField] public GameObject weapon;
+    private GameObject player;
     private void Awake() {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = weapon.GetComponent<Animator>();
+        player = GameObject.Find("Player");
+        movePositionTransform = player.transform;
     }
 
     private void Update() {
