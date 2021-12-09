@@ -6,7 +6,6 @@ public class axeAttack : MonoBehaviour
 {
     Animator animator;
     double cooldown = 0;
-    [SerializeField] public Transform sphereHolder;
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
@@ -18,14 +17,6 @@ public class axeAttack : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Mouse0) && cooldown <= 0) {
             animator.SetTrigger("Attack");
             cooldown += 2;
-
-            Collider[] colliders = Physics.OverlapSphere(sphereHolder.position, 1.5f);
-            foreach(Collider c in colliders)
-            {
-                if(c.GetComponent<EnemyAI>()) {
-                    c.GetComponent<EnemyAI>().TakeDamage(25);
-                }
-            }
         } 
         if(cooldown < 0) {
             cooldown = 0;

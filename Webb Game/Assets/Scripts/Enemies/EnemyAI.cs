@@ -14,6 +14,9 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] public GameObject weapon;
     private GameObject player;
     [SerializeField] public int health;
+    [SerializeField] public Transform sphereHolder;
+    [SerializeField] public int damage;
+    public int score = 0;
     private void Awake() {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = weapon.GetComponent<Animator>();
@@ -34,6 +37,13 @@ public class EnemyAI : MonoBehaviour
             cooldown = 0;
             cooldown += cooldownStatic;
         }
+        Collider[] colliders = Physics.OverlapSphere(sphereHolder.position, 1.5f);
+            foreach(Collider c in colliders)
+            {
+                if(c.GetComponent<DamageHandler>()) {
+                    c.GetComponent<DamageHandler>().TakeDamage(damage);
+                }
+            } 
         if(cooldown > 0) {
             cooldown -= Time.deltaTime;
         } else if(cooldown < 0) {
@@ -42,11 +52,12 @@ public class EnemyAI : MonoBehaviour
     }
 
     public void TakeDamage(int damage) {
-        Debug.Log("DamageTaken");
         health -= damage;
 
         if(health <= 0) {
             Destroy(this.gameObject);
+            score = score + 1;
+            Debug.Log(score);
         }
     }
 }
